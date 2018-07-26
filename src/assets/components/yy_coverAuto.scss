@@ -1,0 +1,47 @@
+@import '../base/yy_mixin';
+
+/*************************************************************************/
+/***************************         开磷通       *************************/
+/**************************      前端开发：阎延     ************************/
+/*************************************************************************/
+/**************************         自动弹窗       ************************/
+/*************************************************************************/
+
+$opacity: 0.8;
+$wrap0H: 75px;
+
+$c_popBg: #000;
+$c_popFont: #fff;
+
+$box_r: 0.5rem;
+$boxH: 10.625rem;
+$boxT: calc((100vh - 10.625rem)*0.45);
+
+$btnH: 2.75rem;
+$txtH: 10.625rem - 2.75rem;
+
+/*************************************************************************/
+
+.popAuto{
+	display:table;
+	width: 80%;
+	text-align: center;
+	position: fixed;
+	top: 40%;
+	left: 10%;
+	z-index: 100001;
+	.box{
+		background: $c_popBg;
+		filter: alpha(opacity=$opacity*100);
+		-moz-opacity: $opacity;
+		-khtml-opacity: $opacity;
+		opacity: $opacity;
+		-moz-border-radius: $box_r;
+		-webkit-border-radius: $box_r;
+		border-radius: $box_r;
+		color: $c_popFont;
+		display: inline-block;
+		padding: $spaceLR $spaceLR*2;
+		outline-width: calc(90vw);
+	}
+}

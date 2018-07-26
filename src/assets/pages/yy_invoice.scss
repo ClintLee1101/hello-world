@@ -1,0 +1,85 @@
+@import '../layout/yy_header';
+@import "../components/yy_button";
+
+/*************************************************************************/
+/***************************         开磷通       *************************/
+/**************************      前端开发：阎延     ************************/
+/*************************************************************************/
+/***************************     发票、承运管理    ************************/
+/*************************************************************************/
+
+ul.invoice{
+	margin-top: $headH;
+	margin-bottom: $foot_h + $spaceV;
+	
+	li{
+		background: $white;
+		margin-top: 0.625rem;
+		padding-top: 0.75rem;
+		
+		p, h5{
+			padding:0 $spaceLR;
+		}
+		h5{
+			color: $gray;
+			margin-top: 0.25rem;
+			display:-moz-flex;
+			display:-webkit-flex;
+			display:flex;
+			align-items: center;
+			
+			span{
+				color: $font;
+			}
+			em{
+				&:first-child {
+					display: inline-block;
+					width: 4em;
+					height: 1.313rem;
+					text-align: justify;
+					text-align-last: justify;
+					
+					&:after {
+						display: inline-block;
+						overflow: hidden;
+						width: 100%;
+						height: 0;
+						content: '';
+						vertical-align: top;
+					}
+				}
+				&:nth-child(2){
+					margin-right: 0.25rem;
+				}
+			}
+		}
+		.btn{
+			@include _linkTop_half;
+			padding-left:$spaceLR !important;
+			margin-top: 0.625rem;
+			font-size: 0.875rem;
+			line-height: 2.5rem;
+			height: 2.5rem;
+			
+			label, span{
+				float: left;
+			}
+			label{
+				margin: 0.5rem 0.643rem 0 0;
+			}
+			a{
+				background: no-repeat 0 50%;
+				background-size: auto 50%;
+				float: right;
+				padding-right: 1.143em;
+				
+				i{
+					color: $gray;
+					font-size: 1.125rem;
+					margin: 0.625rem 0.5rem 0 0;
+					float: left;
+				}
+			}
+		}
+	}
+}

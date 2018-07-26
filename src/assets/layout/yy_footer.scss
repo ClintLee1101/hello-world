@@ -1,0 +1,194 @@
+@import '../base/yy_mixin';
+@import "../components/yy_button";
+
+/*************************************************************************/
+/***************************         开磷通       *************************/
+/**************************      前端开发：阎延     ************************/
+/*************************************************************************/
+/***************************          页脚       *************************/
+/*************************************************************************/
+
+// 购物车、下单确认，公用样式 begin
+@mixin _foot_cart_li01{
+	flex-shrink: 0;
+	label, span{
+		float: left;
+	}
+	label{
+		margin: 0.875rem ($spaceLR /2) 0 $spaceLR;
+	}
+	span{
+		font-size: 0.875rem;
+		line-height: $foot_h;
+	}
+}
+@mixin _foot_cart_li02{
+	-moz-flex-grow:1;
+	-webkit-flex-grow:1;
+	flex-grow:1;
+	margin-left: $spaceLR;
+	
+	.txt{
+		margin-top: 0.25rem;
+	}
+	p, h5, h6{
+		display: inline-block;
+	}
+	h6{
+		color: $gray;
+		margin-right: 0.25rem;
+	}
+}
+
+@mixin _foot_cart{
+	@include _linkTop_half;
+	background: $white;
+	display:-moz-flex;
+	display:-webkit-flex;
+	display:flex;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 1000;
+	
+	li{
+		&:last-child a{
+			flex-shrink: 0;
+			background: $red;
+			display: inline-block;
+			color: $white;
+			line-height: $foot_h;
+			height: $foot_h;
+			width: 6.75rem;
+			text-align: center;
+		}
+	}
+}
+// 购物车、下单确认，公用样式 end
+
+/*************************************************************************/
+
+footer {
+	width: 100%;
+	height: $foot_h;
+	position: fixed !important;
+	bottom: 0;
+	left: 0;
+	z-index: 1000;
+	
+	//app首页底部
+	&.app {
+		@include _linkTop_half;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: flex;
+		z-index: 1000;
+		
+		li {
+			background: no-repeat 50% 0.375em;
+			background-size: auto 40%;
+			-moz-flex-grow: 1;
+			-webkit-flex-grow: 1;
+			flex-grow: 1;
+			text-align: center;
+			
+			&.on, &.on i {
+				color: $blue2;
+			}
+			i {
+				display: inline-block;
+				font-size: $font_iW;
+				width: $font_iW;
+				line-height: $font_iW;
+				height: $font_iW;
+				margin-top: 0.375rem;
+			}
+			
+		}
+	}
+	
+	//通栏按钮
+	&.col {
+		@include _btn_f16h50_red;
+		
+		a {
+			i {
+				font-size: 0.875rem;
+				margin-right: 1rem;
+			}
+		}
+		i, em, span {
+			color: $white;
+			display: inline-block;
+			line-height: $foot_h;
+			height: $foot_h;
+			
+		}
+		span {
+			font-size: $foot_fs;
+			text-align: center;
+			
+		}
+		.i_add {
+			font-size: 1.688em;
+			line-height: $foot_h;
+		}
+	}
+	
+	//登录
+	&.login {
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: flex;
+		a {
+			color: $gray;
+			display: inline-block;
+			-moz-flex-grow: 1;
+			-webkit-flex-grow: 1;
+			flex-grow: 1;
+			
+			font-size: 0.875rem;
+			line-height: 1rem;
+			height: 1rem;
+			padding: 0 1.25rem;
+			margin-top: 0.25rem;
+			
+			&:first-child {
+				@include _linkRight_half;
+				text-align: right;
+			}
+		}
+	}
+	
+	//购物车
+	&.footCart {
+		@include _foot_cart;
+		
+		li {
+			&:nth-child(1) {
+				@include _foot_cart_li01;
+			}
+			&:nth-child(2) {
+				@include _foot_cart_li02;
+			}
+		}
+	}
+	
+	//下单确认
+	&.footOrder{
+		@include _foot_cart;
+		
+		li {
+			&:nth-child(1) {
+				@include _foot_cart_li02;
+			}
+		}
+	}
+	
+}
+
+
+
+
+

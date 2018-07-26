@@ -1,0 +1,79 @@
+@import '../layout/yy_header';
+
+/*************************************************************************/
+/***************************         开磷通       *************************/
+/**************************      前端开发：阎延     ************************/
+/*************************************************************************/
+/***************************        编辑列表       ************************/
+/*************************************************************************/
+
+$editList_liH: 3.75rem;
+$editList_taT: (3.75rem - 1.5rem*2) / 2;
+$editList_iH: 0.875rem;
+$editList_bF: 0.75rem;
+$editList_bH: 1.875rem;
+
+@mixin _edit_list {
+	li {
+		@include _linkBottom_half;
+		background: $white;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: flex;
+		padding: 0 $spaceLR;
+		align-items: stretch;
+		
+		span, input, select, textarea{
+			font-size: 1rem;
+		}
+		span {
+			line-height: $editList_liH;
+			height: $editList_liH;
+			display: block;
+			width: 6rem;
+		}
+		input, select, textarea{
+			-moz-flex-grow: 1;
+			-webkit-flex-grow: 1;
+			flex-grow: 1;
+			
+			font-size: 1rem;
+			line-height: 1.5rem;
+			height: 1.5rem;
+			padding: (($editList_liH - 1.5rem)/2) 0;
+		}
+		select, textarea{
+			line-height: 1.5rem;
+			height: 3rem;
+			margin: $editList_taT 0;
+			padding: 0;
+		}
+		textarea{
+			overflow-y:visible
+		}
+		i{
+			font-size: $editList_iH;
+			line-height: $editList_iH;
+			height: $editList_iH;
+			width: $editList_iH;
+			//margin: (($editList_liH - $editList_iH)/2) 0;
+			padding: (($editList_liH - $editList_iH)/2) 0.625rem;
+		}
+		.txtTab{
+			margin-top: ($editList_liH - $editList_bH)/2;
+			b{
+				@include _textLabel($c_icon, $editList_bF, $editList_bH);
+				padding: 0 1.125rem;
+				
+				&.on{
+					border-color: $red;
+					color: $red;
+				}
+			}
+		}
+	}
+}
+
+footer{
+	text-align: center;
+}

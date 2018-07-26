@@ -1,0 +1,61 @@
+@import '../layout/yy_header';
+@import '../components/yy_button';
+
+/*************************************************************************/
+/***************************         开磷通       *************************/
+/**************************      前端开发：阎延     ************************/
+/*************************************************************************/
+/***************************        提示页       *************************/
+/*************************************************************************/
+
+$i_f: 3rem; 	//提示图片
+
+/*************************************************************************/
+
+.tips{
+	background: $white;
+	text-align: center;
+	padding: 2.5rem 0 3.125rem;
+	
+	i{
+		font-size: $i_f;
+		line-height: $i_f;
+		height: $i_f;
+		width: 100%;
+		text-align: center;
+		margin-bottom: 1rem;
+		
+		&.icon-suc{
+			color: $blue2;
+		}
+		&.icon-fail{
+			color: $red;
+		}
+	}
+	p{
+		font-weight: 500;
+		margin: 1rem 0 0 0.75rem;
+	}
+	h5{
+		color: $gray;
+	}
+}
+
+.btn_submit {
+	display:-moz-flex;
+	display:-webkit-flex;
+	display:flex;
+	padding-top: $spaceLR*2;
+	
+	a{
+		&:nth-child(1){
+			@include _btn_f14h50_red;
+		}
+		&:nth-child(2) {
+			@include _btn_f14h50_white;
+		}
+		
+		width: 50%;
+		margin: 0 1rem;
+	}
+}

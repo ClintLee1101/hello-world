@@ -1,0 +1,43 @@
+//@import "../base/yy_reset";
+//@import "../base/yy_mixin";
+
+
+/*************************************************************************/
+/***************************         开磷通       *************************/
+/**************************      前端开发：阎延     ************************/
+/*************************************************************************/
+/*****************************        导航      ***************************/
+/*************************************************************************/
+
+// 滚动导航
+nav {
+		@include _linkBottom_half;
+		display:-moz-flex;
+		display:-webkit-flex;
+		display:flex;
+		height: 2.5rem;
+		line-height: 2.5rem;
+		
+		div{
+				
+				display: inline-block;
+				-moz-flex-grow:1;
+				-webkit-flex-grow:1;
+				flex-grow:1;
+				text-align: center;
+				
+				span{
+						display: inline-block;
+						line-height: 2.5rem - 0.125rem*2;
+						height: 2.5rem - 0.125rem*2;
+						margin: 0.125rem 0;
+						padding: 0 0.125rem;
+				}
+				
+				&.on span{
+						border-bottom: solid 0.125rem $red;
+						color: $red;
+						margin-bottom: 0;
+				}
+		}
+}

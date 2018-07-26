@@ -1,0 +1,67 @@
+@import '../layout/yy_header';
+@import '../layout/yy_footer';
+@import '../components/yy_nav';
+@import '../components/yy_button';
+@import '../components/yy_list';
+
+/*************************************************************************/
+/***************************         开磷通       *************************/
+/**************************      前端开发：阎延     ************************/
+/*************************************************************************/
+/***************************        登录页       *************************/
+/*************************************************************************/
+
+$liH: 3.75rem;
+$iH: 1.25rem;
+$iR: 1.25rem;
+$iT: (3.75rem - 1.25rem)/2;
+
+$spanW: 6rem;
+$aW: 5rem;
+
+$c_emptied: $gray;
+$c_placeholder: #d2d2d2;
+
+/*************************************************************************/
+
+nav {
+	//margin-top: $headH;
+	margin-top:$headH_0;
+	height: auto;
+	
+	div span {
+		//font-size: 0.875rem;
+		font-size: 1.125em;
+		line-height: 2.389em;
+	}
+	a.icon-arrowL{
+		font-size: 1.438rem;
+		display: block;
+		width: $head_iW;
+		height: $headH;
+		line-height: $headH;
+		flex-shrink: 0;
+		padding-left: $spaceLR;
+	}
+	i{
+		font-size: 1.438rem;
+		display: block;
+		width: $head_iW;
+		height: $headH;
+		line-height: $headH;
+		flex-shrink: 0;
+		padding-right: $spaceLR;
+	}
+}
+
+h5 {
+	color: $gray;
+	margin: 0.625rem $spaceLR 0;
+	text-align: right;
+}
+
+/*
+.btn {
+	@include _btn_submit;
+}
+*/

@@ -1,0 +1,124 @@
+@import '../base/yy_mixin';
+
+/*************************************************************************/
+/***************************         开磷通       *************************/
+/**************************      前端开发：阎延     ************************/
+/*************************************************************************/
+/***************************          弹窗       *************************/
+/*************************************************************************/
+
+$opacity: 0.5;
+$wrap0H: 75px;
+
+$c_popBg: #000;
+$c_popBox: #fff;
+
+$box_r: 0.5rem;
+$boxH: 10.625rem;
+$boxT: calc((100vh - 10.625rem)*0.45);
+
+$btnH: 2.75rem;
+$txtH: 10.625rem - 2.75rem;
+
+$t_boxP: 1.5rem;
+$t_boxH: 10.625rem - 2.75rem - 3rem;
+$t_box_taH: 10.625rem - 2.75rem - 4.5rem;
+
+/*************************************************************************/
+
+.pop{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100001;
+	
+	&, .bg{
+		width: 100%;
+		height: 100%;
+	}
+	.bg, .box{
+		position: absolute;
+	}
+	.bg{
+		background: $c_popBg;
+		filter: alpha(opacity=$opacity*100);
+		-moz-opacity: $opacity;
+		-khtml-opacity: $opacity;
+		opacity: $opacity;
+		z-index: 100002;
+	}
+	//文字+输入框
+	.box{
+		background: $c_popBox;
+		-moz-border-radius: $box_r;
+		-webkit-border-radius: $box_r;
+		border-radius: $box_r;
+		width: 80%;
+		height: $boxH;
+		text-align: center;
+		left: 10%;
+		top: $boxT;
+		z-index: 100003;
+	
+		& > .txt{
+			align-items: center;
+			justify-content: center;
+			height: $txtH;
+			height: $t_boxH;
+			padding: $t_boxP;
+			
+			p, textarea{
+				text-align: left;
+				width: 100%;
+			}
+			textarea{
+				font-size: 1rem;
+				line-height: 1.5rem;
+				height: 3rem;
+				margin-top: 0.75rem;
+			}
+		}
+		// 单个按钮
+		& > .a_btn, & > ul.btn{
+			@include _linkTop_half;
+			background: transparent;
+			color: $blue2;
+			
+			font-size: 0.875rem;
+			line-height: 2.75rem;
+			height: 2.75rem;
+			bottom: 0;
+		}
+		// 多个按钮
+		& > ul.btn{
+			display:-moz-flex;
+			display:-webkit-flex;
+			display:flex;
+			
+			&, li{
+				background: transparent !important;
+			}
+			li{
+				@include _linkLeft_half;
+				display: inline-block;
+				-moz-flex-grow:1;
+				-webkit-flex-grow:1;
+				flex-grow:1;
+				
+				&:first-child:after{
+					width: 0;
+				}
+			}
+		}
+	}
+	
+	//单行文字
+	.boxTxt{
+		.txt{
+			display:-moz-flex;
+			display:-webkit-flex;
+			display:flex;
+			align-items: center;
+		}
+	}
+}

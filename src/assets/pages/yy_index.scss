@@ -1,0 +1,98 @@
+@import '../components/yy_imglist';
+
+/*************************************************************************/
+/***************************         开磷通       *************************/
+/**************************      前端开发：阎延     ************************/
+/*************************************************************************/
+/***************************          首页       *************************/
+/*************************************************************************/
+
+header {
+	.box_input {
+		position: relative;
+	}
+}
+
+.col_wrap {
+	background: $gray_white;
+	padding-top: $spaceV;
+	padding-bottom: 3.75em;
+}
+
+.index_01 {
+	background: $white;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: flex;
+	//height:5.688em;
+	padding-top: 0.875rem;
+	
+	li {
+		display: inline-block;
+		background: no-repeat 50% 0.625rem;
+		background-size: auto 58%;
+		-moz-flex-grow: 1;
+		-webkit-flex-grow: 1;
+		flex-grow: 1;
+		text-align: center;
+		i {
+			font-size: 3rem;
+		}
+	}
+	h5 {
+		margin-bottom: 0.5rem; //0.625rem 0 0.5rem;
+	}
+}
+
+.index_list {
+	ul {
+		@include _linkTop_half;
+		margin-top: 0.5px;
+	}
+	@include _business_list;
+	background: $white;
+	margin-top: 0.625em;
+	
+	&:first-child {
+		margin-top: 0;
+	}
+	
+	.hd {
+		background: #fff;
+		line-height: 2.438em;
+		height: 2.438em;
+		margin: 0 0.625em;
+		position: relative;
+		z-index: 99;
+		
+		.mh_title {
+			font-size: 0.875em;
+			font-weight: 400;
+			float: left;
+		}
+		.mh_option {
+			&, i{
+				color: #858585;
+				font-size: 0.75rem;
+				float: right;
+			}
+			i{
+				font-size: 0.625rem;
+				margin-top: 0.875rem;
+			}
+		}
+	}
+	li {
+		@include _linkLeft_half;
+		width: 50%;
+		padding: 0.875em 0;
+	}
+}
+
+.loading-enter-active, .loading-leave-active {
+	transition: opacity 1s
+}
+
+.loading-enter, .loading-leave-active {
+	opacity: 0
+}

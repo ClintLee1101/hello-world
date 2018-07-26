@@ -1,0 +1,32 @@
+/*************************************************************************/
+/***************************         开磷通       *************************/
+/**************************      前端开发：阎延     ************************/
+/*************************************************************************/
+/***************************        加载更多      *************************/
+/*************************************************************************/
+
+.a_ddLoad {
+		display: inline-block;
+		width: 100%;
+		margin: 0 auto;
+		text-align: center;
+		
+		span {
+				//background: url(/static/images/icon_arrowDown-min.png) no-repeat 100% 50%;
+				background-size: auto 22%;
+				color: $gray;
+				font-size: 0.75em;
+				display: inline-block;
+				line-height: 3.917em;
+				height: 3.917em;
+				padding-right: 1.167em;
+		}
+}
+
+.loading-enter-active, .loading-leave-active {
+		transition: opacity 1s
+}
+
+.loading-enter, .loading-leave-active {
+		opacity: 0
+}

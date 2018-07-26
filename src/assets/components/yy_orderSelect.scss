@@ -1,0 +1,53 @@
+@import '../layout/yy_header';
+@import "../components/yy_button";
+
+/*************************************************************************/
+/***************************         开磷通       *************************/
+/**************************      前端开发：阎延     ************************/
+/*************************************************************************/
+/***************************     下单页 - 选择    *************************/
+/*************************************************************************/
+
+
+ul.order{
+	margin-bottom: $spaceV;
+	z-index: 100;
+	
+	li{
+		select{
+			font-size: 0.875rem;
+			direction: rtl;
+			
+			option{
+				text-align: right;
+			}
+		}
+		
+		&.li_date{
+			z-index: 10000;
+			
+			.cov-vue-date{
+				padding: 0;
+			}
+		}
+	}
+}
+
+.order_total{
+	background: $white;
+	margin: $spaceV 0 $foot_h;
+	padding: 0.5rem 0 0.438rem;
+	
+	h6{
+		display:-moz-flex;
+		display:-webkit-flex;
+		display:flex;
+		justify-content: flex-end;
+		margin-top: 0.438rem;
+		
+		strong{
+			width: 10rem;
+		}
+	}
+}
+

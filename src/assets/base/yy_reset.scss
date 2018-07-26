@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+/*************************************************************************/
+/***************************         开磷通       *************************/
+/**************************      前端开发：阎延     ***********************/
+/*************************************************************************/
+
+[ms-controller], [ms-important] {
+	visibility: hidden;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+
+body {
+	font-family: '微软雅黑', '黑体'; //'PingFang_Regular';
+	font-size: 1em;
+	-webkit-tap-highlight-color: transparent;
+}
+
+a {
+	cursor: pointer;
+	text-decoration: none;
+	outline: none;
+}
+
+a:focus {
+	outline: none;
+}
+
+b, i, em, strong, h3, h4, h5, h6 {
+	font-style: normal;
+	font-weight: normal;
+}
+
+img {
+	border: none;
+	display: block;
+	width: 100%;
+}
+
+ol, ul, li {
+	list-style-type: none;
+	zoom: 1;
+}
+
+ol, ul {
+	clear: both;
+}
+
+input, select, textarea {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	border: none;
+	outline: none;
+	-webkit-appearance: none;
+}
+
+dl dt, dl dd {
+	font-size: 1em;
+}

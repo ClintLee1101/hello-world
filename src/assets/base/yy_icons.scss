@@ -1,0 +1,342 @@
+
+/*************************************************************************/
+/***************************         开磷通       *************************/
+/**************************      前端开发：阎延     ***********************/
+/*************************************************************************/
+
+//@font-face {
+//  font-family: 'icomoon';
+//  src:  url('/static/fonts/icomoon.eot?n8uxzd');
+//  src:  url('/static/fonts/icomoon.eot?n8uxzd#iefix') format('embedded-opentype'),
+//  url('/static/fonts/icomoon.ttf?n8uxzd') format('truetype'),
+//  url('/static/fonts/icomoon.woff?n8uxzd') format('woff'),
+//  url('/static/fonts/icomoon.svg?n8uxzd#icomoon') format('svg');
+//  font-weight: normal;
+//  font-style: normal;
+//}
+
+[class^="icon-"], [class*=" icon-"] {
+  color: #a3a3a3;
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*************************************************************************/
+
+//    首页
+//LOGO：icon-logo
+//查找：icon-find
+//厂家直销：icon-index1  color: #ec5f4c;
+//弄也农化：icon-index2  color: #4f8ed5;
+//灵活理财：icon-index3  color: #e65758;
+//购物车-空：icon-cart
+//购物车-满：icon-cart2
+
+//    电商页脚
+//开磷商城：icon-foot1
+//开磷商城-当前状态：icon-foot1_on
+//我的账户：icon-foot2
+//我的账户-当前状态：icon-foot2_on
+
+//    登录
+//手机号：icon-phone
+//密码：icon-pwd
+
+//    箭头
+//上箭头：icon-arrowT
+//下箭头：icon-arrowB
+//左箭头：icon-arrowL
+//右箭头：icon-arrowR
+
+//    商品详情
+//选中项目：icon-corner
+
+//加载更多：icon-load
+//地址：icon-address
+//加号：icon-add
+//减号：icon-minus
+//删除：icon-del
+//编辑：icon-edit
+//清空：icon-emptied
+//勾（单选）：icon-on
+
+//    我的账户
+//设置标：icon-set
+//消息标：icon-info
+//审批中：icon-my01
+//待支付：icon-my02
+//执行中：icon-my03
+//已完成：icon-my04
+//已取消：icon-my05
+//余额：icon-my06
+//投资：icon-my07
+//借款：icon-my08
+//提问：icon-my09
+//回答：icon-my10
+//评论：icon-my11
+
+//    设置
+//账户信息：icon-set01
+//我的银行卡：icon-set02
+//我的收货地址：icon-set03
+//我的发票信息：icon-set04
+//修改登录手机号：icon-set05
+//修改登录密码：icon-set06
+//重置交易密码：icon-set07
+//风险评测：icon-set08
+
+//    提示页
+//成功：icon-suc
+//失败：icon-fail
+
+/*************************************************************************/
+
+.icon-index3:before {
+  color: #e65758;
+}
+.icon-index2:before {
+  color: #4f8ed5;
+}
+.icon-index1:before {
+  color: #ec5f4c;
+}
+
+/*************************************************************************/
+
+.icon-set07:before {
+  content: "\e943";
+}
+.icon-on2:before {
+  content: "\e900";
+}
+.icon-pwd:before {
+  content: "\e901";
+}
+.icon-suc:before {
+  content: "\e902";
+}
+.icon-step4:before {
+  content: "\e903";
+}
+.icon-step3:before {
+  content: "\e904";
+}
+.icon-step2:before {
+  content: "\e905";
+}
+.icon-step1:before {
+  content: "\e906";
+}
+.icon-set06:before {
+  content: "\e907";
+}
+.icon-set05:before {
+  content: "\e908";
+}
+.icon-set04:before {
+  content: "\e909";
+}
+.icon-set03:before {
+  content: "\e90a";
+}
+.icon-set01:before {
+  content: "\e90b";
+}
+.icon-set:before {
+  content: "\e90c";
+}
+.icon-phone:before {
+  content: "\e90d";
+}
+.icon-on:before {
+  content: "\e90e";
+}
+.icon-my14:before {
+  content: "\e90f";
+}
+.icon-my13:before {
+  content: "\e910";
+}
+.icon-my12:before {
+  content: "\e911";
+}
+.icon-my11:before {
+  content: "\e912";
+}
+.icon-my10:before {
+  content: "\e913";
+}
+.icon-my09:before {
+  content: "\e914";
+}
+.icon-my08:before {
+  content: "\e915";
+}
+.icon-my07:before {
+  content: "\e916";
+}
+.icon-my06:before {
+  content: "\e917";
+}
+.icon-my05:before {
+  content: "\e918";
+}
+.icon-my04:before {
+  content: "\e919";
+}
+.icon-my03:before {
+  content: "\e91a";
+}
+.icon-my02:before {
+  content: "\e91b";
+}
+.icon-my01:before {
+  content: "\e91c";
+}
+.icon-minus:before {
+  content: "\e91d";
+}
+.icon-load:before {
+  content: "\e91e";
+}
+.icon-info:before {
+  content: "\e91f";
+}
+.icon-index3:before {
+  content: "\e920";
+}
+.icon-index2:before {
+  content: "\e921";
+}
+.icon-index1:before {
+  content: "\e922";
+}
+.icon-foot2:before {
+  content: "\e923";
+}
+.icon-foot2_on:before {
+  content: "\e924";
+}
+.icon-foot1:before {
+  content: "\e925";
+}
+.icon-foot1_on:before {
+  content: "\e926";
+}
+.icon-find:before {
+  content: "\e927";
+}
+.icon-fail:before {
+  content: "\e928";
+}
+.icon-emptied:before {
+  content: "\e929";
+}
+.icon-edit:before {
+  content: "\e92a";
+}
+.icon-del:before {
+  content: "\e92b";
+}
+.icon-corner:before {
+  content: "\e92c";
+}
+.icon-cart2:before {
+  content: "\e92d";
+}
+.icon-cart:before {
+  content: "\e92e";
+}
+.icon-arrowT:before {
+  content: "\e92f";
+}
+.icon-arrowR:before {
+  content: "\e930";
+}
+.icon-arrowL:before {
+  content: "\e931";
+}
+.icon-arrowB:before {
+  content: "\e932";
+}
+.icon-address:before {
+  content: "\e933";
+}
+.icon-add:before {
+  content: "\e934";
+}
+.icon-RMB:before {
+  content: "\e935";
+}
+.icon-to:before {
+  content: "\e936";
+}
+.icon-logo .path1:before {
+  content: "\e937";
+  color: rgb(47, 53, 137);
+}
+.icon-logo .path2:before {
+  content: "\e938";
+  margin-left: -1em;
+  color: rgb(213, 32, 37);
+}
+.icon-logo .path3:before {
+  content: "\e939";
+  margin-left: -1em;
+  color: rgb(47, 53, 137);
+}
+.icon-logo .path4:before {
+  content: "\e93a";
+  margin-left: -1em;
+  color: rgb(47, 53, 137);
+}
+.icon-logo .path5:before {
+  content: "\e93b";
+  margin-left: -1em;
+  color: rgb(47, 53, 137);
+}
+.icon-logo .path6:before {
+  content: "\e93c";
+  margin-left: -1em;
+  color: rgb(47, 53, 137);
+}
+.icon-logo .path7:before {
+  content: "\e93d";
+  margin-left: -1em;
+  color: rgb(47, 53, 137);
+}
+.icon-logo .path8:before {
+  content: "\e93e";
+  margin-left: -1em;
+  color: rgb(47, 53, 137);
+}
+.icon-logo .path9:before {
+  content: "\e93f";
+  margin-left: -1em;
+  color: rgb(47, 53, 137);
+}
+.icon-logo .path10:before {
+  content: "\e940";
+  margin-left: -1em;
+  color: rgb(47, 53, 137);
+}
+.icon-logo .path11:before {
+  content: "\e941";
+  margin-left: -1em;
+  color: rgb(47, 53, 137);
+}
+.icon-logo .path12:before {
+  content: "\e942";
+  margin-left: -1em;
+  color: rgb(213, 32, 37);
+}

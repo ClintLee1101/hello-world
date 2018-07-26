@@ -1,0 +1,93 @@
+//@import "../base/yy_reset";
+//@import "../base/yy_mixin";
+
+/*************************************************************************/
+/***************************         开磷通       *************************/
+/**************************      前端开发：阎延     ************************/
+/*************************************************************************/
+/***************************        滚动导航      *************************/
+/*************************************************************************/
+
+// 滚动导航
+nav.scroll {
+	@include _linkBottom_half;
+	height: 2.438em;
+	line-height: 2.438em;
+	width: 100%;
+	background: #fff;
+	padding: 0 0.625em;
+	box-sizing: border-box;
+	max-width: 1080px;
+	opacity: 1;
+	-webkit-transition: .3s all;
+	transition: .3s all;
+	
+	//&::-webkit-scrollbar {
+	//	display: none;
+	//}
+	
+	.slider_wrap {
+		height: 2.438em;
+		overflow: hidden;
+		overflow-x: scroll;
+		width: 100%;
+		-webkit-overflow-scrolling: touch;
+		
+		&::-webkit-scrollbar {
+			display: none;
+		}
+		&.box {
+			width: 100%;
+			overflow: hidden;
+		}
+		.item_cell {
+			display: inline-block;
+			overflow: hidden;
+			position: relative;
+		}
+	}
+	
+	.container {
+		white-space: nowrap;
+		
+		span {
+			font-size: 0.875em;
+			line-height: 2.325em;
+			height: 2.325em;
+			//line-height:2.425em;
+			//height:2.425em;
+			display: inline-block;
+			float: left;
+			text-decoration: none;
+			margin: 0.214em 1em;
+			position: relative;
+			white-space: nowrap;
+			//display:block;
+			-webkit-tap-highlight-color: transparent;
+			text-align: center;
+			cursor: pointer;
+			
+			em{
+				color: $gray;
+				font-size: 0.75rem;
+				margin-left: 0.125rem;
+			}
+		}
+		.on {
+			a:focus, a:hover, a:link, a:visited, span {
+				border-bottom: solid 0.214em $red;
+				color: $red;
+				font-weight: bold;
+				margin-bottom: 0;
+			}
+			span {
+				position: relative;
+				z-index: 100000;
+				
+				em{
+					color: $red;
+				}
+			}
+		}
+	}
+}

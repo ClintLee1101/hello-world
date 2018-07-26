@@ -1,0 +1,271 @@
+/*************************************************************************/
+/***************************         开磷通       *************************/
+/**************************      前端开发：阎延     ************************/
+/*************************************************************************/
+/***************************          按键       *************************/
+/*************************************************************************/
+
+$btn_red: #de2727;
+$btn_blue: #4a6ccf;
+$btn_gray: #d2d2d2;
+$btn_radius: 0.188rem;
+
+
+
+/*************************************************************************/
+/***************************          单选       *************************/
+/*************************************************************************/
+
+$check_bc: #9fa3b6;
+$check_bw: 0.063rem;
+$check_w: 1.25rem;
+$check_wOn: calc(1.25rem + 0.063rem * 2);
+
+$check_blue_w: 1rem;
+
+@mixin _label_check{
+	border: solid $check_bw $check_bc;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	display: inline-block;
+	cursor: pointer;
+	
+	&.icon-on {
+		border-width: 0;
+	}
+	input {
+		margin-right: 5px;
+		position: absolute;
+		left: -9999px;
+	}
+}
+
+label.check {
+	@include _label_check;
+	width: $check_w;
+	height: $check_w;
+	
+	&.icon-on {
+		color: $btn_red;
+		font-size: $check_wOn;
+		line-height: $check_wOn;
+		width: $check_wOn;
+		height: $check_wOn;
+	}
+}
+
+label.check_blue {
+	@include _label_check;
+	
+	&, &.icon-on{
+		width: $check_blue_w;
+		height: $check_blue_w;
+	}
+	
+	&.icon-on {
+		color: $btn_blue;
+		font-size: $check_blue_w;
+		line-height: $check_blue_w;
+	}
+}
+
+
+
+/*************************************************************************/
+/***************************         数字+-      *************************/
+/*************************************************************************/
+
+$btnNum_h: 1.75rem;
+$btnNum_w: 2.125rem;
+$btnNum_bc: #a3a3a3;
+
+.btn_num {
+	span {
+		-moz-border-radius: 0.188rem;
+		-webkit-border-radius: 0.188rem;
+		border-radius: 0.188rem;
+		display: inline-block;
+		height: $btnNum_h;
+		overflow: hidden;
+	}
+	a, input[type="text"], input[type="number"] {
+		float: left;
+		text-align: center;
+	}
+	a, span {
+		border: solid 1px $bord_c;
+	}
+	a, input{
+		color: $font;
+	}
+	a {
+		background: no-repeat 50% 50%;
+		font-size: 0.875rem;
+		line-height: $btnNum_h;
+		height: $btnNum_h;
+		width: $btnNum_w;
+		margin: 0;
+		padding: 0;
+	}
+	.a_down {
+		border-width: 0 1px 0 0;
+	}
+	.a_up {
+		border-width: 0 0 0 1px;
+	}
+	input[type="text"], input[type="number"] {
+		font-size: 0.875rem;
+		line-height: $btnNum_h;
+		height: $btnNum_h;
+		width: $btnNum_w;
+	}
+}
+
+
+
+/*************************************************************************/
+/***************************          btn       *************************/
+/*************************************************************************/
+
+@mixin _btn_radius{
+	-moz-border-radius: $btn_radius;
+	-webkit-border-radius: $btn_radius;
+	border-radius: $btn_radius;
+}
+
+@mixin _btn_f16h50($c_border){		//边框颜色
+	border: solid 1px $c_border;
+	color: $white;
+	display: inline-block;
+	font-size: 1rem;
+	line-height: 3rem;
+	height: 3rem;
+	text-align: center;
+	width: 100%;
+}
+
+@mixin _btn_f16h50_red{
+	a{
+		@include _btn_f16h50($btn_red);
+		background: $btn_red;
+	}
+}
+
+// 红字红框__空购物车
+.btn_redBord{
+	@include _btn_f16h50($btn_red);
+	@include _btn_radius;
+	color: $btn_red;
+	width: 55%;
+}
+
+
+
+/*************************************************************************/
+
+@mixin _btn_f14h50{
+	color: $white;
+	display: inline-block;
+	font-size: 0.875rem;
+	line-height: 3.125rem;
+	height: 3.125rem;
+	width: 100%;
+	text-align: center;
+}
+
+@mixin _btn_f14h50_red{
+	@include _btn_radius;
+	@include _btn_f14h50;
+	background: $btn_red;
+}
+
+@mixin _btn_f14h50_white{
+	@include _btn_radius;
+	@include _btn_f14h50;
+	background: $white;
+	color: $font;
+}
+
+@mixin _btn_f14h50_blue{
+	@include _btn_radius;
+	@include _btn_f14h50;
+	background: $btn_blue;
+}
+
+
+
+/*************************************************************************/
+//银行卡添加按钮
+
+.btn_submit_white{
+	margin-top: 1.25rem;
+	
+	a{
+		@include _btn_f14h50;
+		background: $white;
+		color: $btn_blue;
+	}
+}
+
+
+
+/*************************************************************************/
+//提交按钮
+
+@mixin _btn_f14h44{
+	color: $white;
+	font-size: 0.875rem;
+	line-height: 2.75rem;
+	height: 2.75rem;
+}
+
+.btn_submit {
+	padding: $spaceLR;
+	
+	a, input[type=button]{
+		@include _btn_radius;
+		@include _btn_f14h44;
+		background: $btn_red;
+		display: block;
+		width: 100%;
+		text-align: center;
+		
+		&:disabled{
+			background: $btn_gray;
+		}
+	}
+}
+
+
+
+/*************************************************************************/
+//小按钮
+
+@mixin _btn_f14h30($c_border){		//边框颜色
+	@include _btn_radius;
+	border: solid 1px $c_border;
+	color: $white;
+	display: inline-block;
+	font-size: 0.875rem;
+	line-height: 1.75rem;
+	height: 1.75rem;
+	width: 5em;
+	text-align: center;
+}
+
+.btn_small{
+	.btn_red{
+		@include _btn_f14h30($btn_red);
+		background: $btn_red;
+	}
+	.btn_blue {
+		@include _btn_f14h30($btn_blue);
+		background: $btn_blue;
+	}
+	.btn_white{
+		@include _btn_f14h30($btn_gray);
+		background: $white;
+		color: $font;
+	}
+}

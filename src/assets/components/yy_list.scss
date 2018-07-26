@@ -1,0 +1,241 @@
+@import "../base/yy_mixin";
+@import "../components/yy_bankimg";
+
+/*************************************************************************/
+/***************************         开磷通       *************************/
+/**************************      前端开发：阎延     ************************/
+/*************************************************************************/
+/***************************        页面列表      *************************/
+/*************************************************************************/
+
+$liH: 3.75rem;
+$iH: 1.25rem;
+$iR: 1.25rem;
+$iT: (3.75rem - 1.25rem)/2;
+$selectH: 3.75 - 0.625rem *2;
+
+$liH_50: 3.125rem;
+$iT_50: (3.135rem - 1.25rem)/2;
+
+$spanW: 6rem;
+$aW: 5rem;
+
+$c_emptied: $gray;
+$c_placeholder: #d2d2d2;
+
+$fs: 0.875rem;
+$fh: 3.125rem;
+
+/*************************************************************************/
+
+@mixin _dl($dtW) {		//dt的宽度
+	@include _linkBottom_half;
+	@include _bank_img($fh);
+	display:-moz-flex;
+	display:-webkit-flex;
+	display:flex;
+	align-items: center;
+	vertical-align: middle;
+	flex-flow: row;
+	padding: 0 $spaceLR;
+	
+	
+	&:first-child{
+		margin-bottom: 0;
+	}
+	&, dt, dd{
+		font-size: $fs;
+		line-height: $fh;
+		height: $fh;
+	}
+	dt, dd{
+		display: inline-block;
+	}
+	dt{
+		flex-shrink: 0;
+		width: $dtW;
+	}
+	dd{
+		-moz-flex-grow:1;
+		-webkit-flex-grow:1;
+		flex-grow:1;
+		
+		strong{
+			color: $red;
+			font-weight: 500;
+			float: right;
+		}
+	}
+}
+
+@mixin _ul{
+	background: $white;
+	margin-top: $spaceV;
+	
+	li {
+		@include _linkTop_half;
+		
+		&:first-child:after {
+			height: 0;
+		}
+	}
+}
+
+@mixin _li{
+	align-items: center;
+	display:-moz-flex;
+	display:-webkit-flex;
+	display:flex;
+	height: 3.125rem;
+	padding: 0 $spaceLR;
+	
+	b, i{
+		flex-shrink: 0;
+	}
+	i{
+		font-size: 1.5rem;
+		width: 1.5rem;
+		margin-right: 0.875rem;
+	}
+	b{
+		font-size: 0.875rem;
+		width: 0.875rem;
+		
+	}
+	span{
+		color: $red2;
+		font-size: 0.875rem;
+	}
+	h5{
+		-moz-flex-grow:1;
+		-webkit-flex-grow:1;
+		flex-grow:1;
+	}
+}
+
+@mixin _ul_list {
+	@include _linkBottom_half;
+	padding: 0 $spaceLR;
+	
+	li {
+		@include _linkTop_half;
+		
+		display:-moz-flex;
+		display:-webkit-flex;
+		display:flex;
+		align-items: center;
+		vertical-align: middle;
+		flex-flow: row;
+		
+		&:first-child:after {
+			height: 0;
+		}
+		a, i, input, span, strong, &> div {
+			vertical-align: middle;
+		}
+		a, i, span{
+			flex-shrink: 0;
+		}
+		a, span{
+			display: block;
+		}
+		a, input[type=button] {
+			color: $blue2;
+			font-size: 0.875rem;
+			width: $aW;
+			padding-left: $iR/2;
+			//padding-top: 1.375rem;
+		}
+		i {
+			font-size: $iH;
+			
+			&:first-child {
+				margin-right: $iR;
+			}
+			&.icon-emptied {
+				font-size: 1.125rem;
+				margin-top: 0.125rem;
+				padding-left: $iR/2;
+				padding-right: $iR/2;
+			}
+		}
+		input, select, strong, .cov-vue-date{
+			display: inline-block;
+			-moz-flex-grow:1;
+			-webkit-flex-grow:1;
+			flex-grow:1;
+			min-width: 20%;
+		}
+		input, strong{
+			font-size: 1rem;
+			line-height: $iH;
+			height: $iH;
+		}
+		input, select {
+			&::-webkit-input-placeholder {
+				color: $c_placeholder;
+			}
+			&:-moz-placeholder {
+				color: $c_placeholder;
+			}
+			&::-moz-placeholder {
+				color: $c_placeholder;
+			}
+			&:-ms-input-placeholder {
+				color: $c_placeholder;
+			}
+		}
+		span {
+			width: $spanW;
+		}
+		input[type=button]{
+			background: none;
+			padding: 0;
+			margin-top: 1.375rem;
+			
+			&:disabled{
+				color: $c_placeholder;
+			}
+		}
+	}
+}
+
+ul.list60{
+	@include _ul_list;
+	@include _bank_img($liH);
+	
+	li{
+		height: $liH;
+		
+		a, i, input, span, strong, &> div {
+			//padding-top: $iT;
+		}
+		select{
+			height: $liH;
+		}
+	}
+}
+
+ul.list50{
+	@include _ul_list;
+	@include _bank_img($liH_50);
+	
+	li{
+		height: $liH_50;
+		
+		a, i, input, span, strong, &> div {
+			padding-top: $iT_50;
+		}
+		select{
+			height: $liH_50;
+		}
+	}
+}
+
+//错误提示
+.eTip{
+	margin: 0.75rem $spaceLR 0;
+	h6 {
+		color: $red;
+	}
+}
