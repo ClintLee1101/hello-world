@@ -4,6 +4,7 @@
 开磷通-app
 运行平台：安卓(4.0以上)+ios（8.0以上）
 项目构建：webpack+vue+cordova+crosswalk
+项目方案演化：avalon+avalon Router+requireJs+avalon history→webpack+vue
 集成支付方式：支付宝支付和微信支付
 使用cordova 插件包括:
 com.cordova.plugins.cookiemaster 1.0.0 "CookieMaster"
